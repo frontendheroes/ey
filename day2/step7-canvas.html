@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid rebeccapurple;
+            margin: auto;
+            display: block;
+        }
+    </style>
+    <script>
+        var can,ctx;
+        addEventListener("load", init);
+        function init(){
+            can = document.getElementsByTagName("canvas")[0];
+            ctx = can.getContext("2d");
+            ctx.font = "normal 40px arial";
+            ctx.textAlign = "center";
+            ctx.fillStyle = "yellow";
+            ctx.fillText("Ernst & Young",250,260);
+        };
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500"></canvas>
+</body>
+</html>

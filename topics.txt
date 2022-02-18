@@ -1,0 +1,104 @@
+                                     HTML & HTML5
+DAY 3
+
+Introduction
+•	Overview of Web and Internet
+•	Differnece between Languages and Scripts
+•	Client side and Server side Programming
+•	Types of Protocol and What is HTTP?
+•	What is HTML?
+•	Versions of HTML
+•	Structure Of HTML
+•	Comparing HTML5 File to HTML4 File
+•	How html content is transferring data between browser and server
+•	Types of Webpages
+•	Introduction To Doctypes
+•	Using Visual Studio Code
+HTML Tags
+•	Types of tags
+•	Explanation about html, head and body tags
+•	Input controls and attributes
+•	How to divide web page with div tag
+•	Formating Tags
+•	Link Tags
+•	How to create order list and unordered list
+•	Table tag
+•	Form tag
+•	Frame Tag
+•	How to provide Meta key words
+•	What is Meta Description?
+
+
+
+Attributes
+•	What is attribute?
+•	Attributes of html controls
+Events
+•	What is event and how to use?
+•	Dynamic html with events
+Day 4:
+Styling
+•	What is style object?
+•	Properties of style
+•	Applying styles to elements
+•	Changing style properties with events
+Advanced HTML
+•	How to embed the external plug-in in html document
+•	How can we display videos on browsers using html tags?
+•	How to embed external web pages in html page
+•	Resolving cross browser issues.
+
+Structure of HTML5
+•	HTML5 Syntax
+•	HTML5 Attributes
+•	HTML5 Events
+•	HTML5 Web Forms 2.0
+•	HTML5 SVG
+HTML5 Web Storage
+•	Session Storage
+•	Local Storage
+•	Delete Web Storage
+HTML5 Web Socket
+•	Web Socket Attributes
+•	Web Socket Events
+•	Web Socket Methods
+•	Web Socket Example
+HTML5 Canvas
+•	What is Canvas?
+•	Canvas Co-ordinates
+•	Fallback content
+•	Working with Canvas(path, Lines, Bezier, Quadratic,Images,Colors,Fonts,Shadows,Translation,Rotation)
+HTML5 Audio & Video
+•	Embedding Video Graphics
+•	Video Attribute Specification
+•	Embedding Audio
+•	Audio Attribute Specification
+•	Handling Media Events
+•	Configuring Servers for media Type
+
+Day 5:
+CASCADING STYLE SHEET(CSS)
+•	CSS3 Introduction 
+•	· CSS Syntax 
+•	· CSS Id 
+•	· CSS Margin
+•	CSS3 Styling · CSS Padding
+•	· Styling Backgrounds CSS3 Advanced
+•	· Styling Text
+•	· Styling Fonts 
+•	· Styling Links 
+•	· Styling Lists 
+•	· Styling Tables
+
+
+Day 6:
+
+•	· CSS Floating
+•	· CSS Align
+•	· CSS Pseudo-class
+•	· CSS3 Pseudo-element
+•	· CSS3 Image Opacity
+•	· CSS3 Media Types
+•	· CSS3 Attribute
+•	CSS3 Border
+•	CSS3 Animation

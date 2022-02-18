@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Storage</title>
+    <script>
+        addEventListener("load", init);
+        var user;
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", clickHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", getUserNameHandler);
+        }
+        function clickHandler(){
+            user = document.getElementsByTagName("input")[0].value;
+        }
+        function getUserNameHandler(){
+            document.getElementsByTagName("output")[0].value = user;
+        }
+    </script>
+</head>
+<body>
+    <input type="text">
+    <button>Add User Name</button>
+    <br>
+    <hr>
+    <button>Get User Name</button>
+    <h2>User Name is : <output></output></h2>
+</body>
+</html>

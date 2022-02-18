@@ -20,23 +20,46 @@
             margin: 5px;
             float: left;
         }
+     /*    vijay{
+            width: 500px;
+            height: 100px;
+            background-color: chocolate;
+            display: block;
+        } */
     </style>
+   <!--  <script>
+        document.createElement("vijay");
+    </script> -->
 </head>
 <body>
     <button>Add Box</button>
+    <button>Stop Adding Boxes</button>
+    <!-- <button data-ey="EMP101">Add Box</button> -->
     <hr>
     <div id="container"></div>
+   <!--  <vijay></vijay> -->
     <script>
        /*  document.getElementsByTagName("button")[0].onclick = function(){
             alert("you clicked me")
         } */
+
         document.getElementsByTagName("button")[0].addEventListener("click", clickHandler);
+        document.getElementsByTagName("button")[1].addEventListener("click", stopClickHandler);
+
+        // alert(document.getElementsByTagName("button")[0].getAttribute("data-ey"));
+        
         function clickHandler(){
             // alert("you clicked me");
             var box = document.createElement("div");
                 box.setAttribute("class","box");
             document.getElementById("container").appendChild(box);  
+            console.log("box added");
         };
+        function stopClickHandler(){
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickHandler);
+            document.getElementsByTagName("button")[1].removeEventListener("click", stopClickHandler);
+            console.log("box adding stopped");
+        }
     </script>
 </body>
 </html>

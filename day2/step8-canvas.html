@@ -18,10 +18,14 @@
         function init(){
             can = document.getElementsByTagName("canvas")[0];
             ctx = can.getContext("2d");
-            ctx.font = "normal 40px arial";
-            ctx.textAlign = "center";
-            ctx.fillStyle = "yellow";
-            ctx.fillText("Ernst & Young",250,260);
+            var img = new Image();
+                img.src = "images/rajani.jpg";
+                img.addEventListener("load", function(evt){
+                    // ctx.scale(1,1);// witdth and height multipliers
+                    // ctx.rotate((Math.PI / 180) * 45);
+                    ctx.translate(50,50);
+                    ctx.drawImage(evt.target,0,0);
+                })
         };
     </script>
 </head>
@@ -31,7 +35,5 @@
 </html>
 
 <!--
-    Assignment 2
-    Make the word Ernst in yellow
-    Young is black
+
 -->

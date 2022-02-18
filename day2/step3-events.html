@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Element Generation</title>
+    <style>
+        #container{
+            width: 700px;
+            height: 350px;
+            background-color: rgb(243, 177, 154);
+            margin: auto;
+            overflow: auto;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(75, 50, 41);
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <button>Add Box</button>
+    <hr>
+    <div id="container"></div>
+    <script>
+       /*  document.getElementsByTagName("button")[0].onclick = function(){
+            alert("you clicked me")
+        } */
+        document.getElementsByTagName("button")[0].addEventListener("click", clickHandler);
+        function clickHandler(){
+            // alert("you clicked me");
+            var box = document.createElement("div");
+                box.setAttribute("class","box");
+            document.getElementById("container").appendChild(box);  
+        };
+    </script>
+</body>
+</html>

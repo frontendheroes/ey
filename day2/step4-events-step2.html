@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Element Generation</title>
+    <style>
+        #container{
+            width: 700px;
+            height: 350px;
+            background-color: rgb(243, 177, 154);
+            margin: auto;
+            overflow: auto;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(75, 50, 41);
+            margin: 5px;
+            float: left;
+            color: aliceblue;
+            font-size: 40px;
+            font-family: trebuchet;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box:hover{
+            background-color: rgb(160, 104, 84);
+            cursor: pointer;
+        }
+    </style>
+     <script>
+         addEventListener("load", init);
+         var buttons,
+             container,
+             count = 1;
+         function init(){
+            /* 
+            document.getElementsByTagName("button")[0].addEventListener("click", addBoxHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", removeFirstBoxHandler); 
+            */
+            buttons = document.getElementsByTagName("button");
+            container = document.getElementById("container");
+            buttons[0].addEventListener("click", addBoxHandler);
+            buttons[1].addEventListener("click", removeFirstBoxHandler); 
+            buttons[2].addEventListener("click", removeLastBoxHandler); 
+            // console.log(document.body.childNodes.length);
+            container.addEventListener("click", removeSelectedBox);
+         }
+        
+        function addBoxHandler(){
+            var box = document.createElement("div");
+                box.setAttribute("class","box");
+                box.textContent = count;
+                // box.addEventListener("click", removeSelectedBox)
+                container.appendChild(box);  
+                count++;
+        };
+        function removeFirstBoxHandler(){
+            var box = container.firstChild;
+                if(box){
+                    container.removeChild(box);  
+                    count--;
+                }else{
+                    alert("nothing to remove")
+                }
+        };
+        function removeLastBoxHandler(){
+            var box = container.lastChild;
+                if(box){
+                    container.removeChild(box);  
+                    count--;
+                }else{
+                    alert("nothing to remove")
+                }
+        };
+     /*   function removeSelectedBox(event){
+           // alert("you clicked the box");
+           var box = event.target;
+            container.removeChild(box);
+       } */
+       function removeSelectedBox(event){
+           if(event.target.id !=="container"){
+               container.removeChild(event.target);
+           }else{
+               alert("select the box to remove");
+           }            
+       }
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <button>Remove First Box</button>
+    <button>Remove Last Box</button>
+    <hr>
+    <div id="container"></div>
+</body>
+</html>

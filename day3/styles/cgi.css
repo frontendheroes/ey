@@ -1,0 +1,32 @@
+html body p[id][class].box.xbox#cgi{
+    background-color: rgb(158, 12, 12);
+    color: aliceblue;
+}
+/*=============================*/
+html body p[id][class].box#cgi{
+    background-color: indigo;
+    color: aliceblue;
+}
+html body p.box#cgi{
+    background-color: hotpink;
+}
+body p.box#cgi{
+    background-color: greenyellow;
+}
+p.box#cgi{
+    background-color: red;
+}
+
+p#cgi{
+    background-color: yellow;
+}
+
+p{
+    background-color: silver;
+}
+.box{
+    background-color: orange;
+}
+#cgi{
+    background-color:orchid;
+}

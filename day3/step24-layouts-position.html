@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layouts Basics</title>
+    <style>
+        body{
+            border: 1px solid red;
+        }
+        .container{
+            width: 600px;
+            height: 600px;
+            margin-left: 200px;
+            background-color: darkblue;
+            position: relative;
+        }
+        #box1{
+            width: 200px;
+            background-color: chartreuse;
+            position:absolute;
+            left: 0px;
+        }
+        #box2{
+            width: 200px;
+            background-color: darkgoldenrod;
+            position:absolute;
+            left: 200px;
+        }
+        #box3{
+            width: 200px;
+            background-color: darkorange;
+            position:absolute;
+            left: 400px;
+        }
+       
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div id="box1">
+          <img src="images/batman.jpg" width="200px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil porro veritatis ad magnam asperiores suscipit deserunt voluptatem expedita adipisci hic obcaecati, cum similique impedit at repudiandae exercitationem rem. Non, ea!
+      </div>
+      <div id="box2">
+          <img src="images/ironman.jpg" width="200px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil porro veritatis ad magnam asperiores suscipit deserunt voluptatem expedita adipisci hic obcaecati, cum similique impedit at repudiandae exercitationem rem. Non, ea!
+      </div>
+      <div id="box3">
+          <img src="images/phantom.jpg" width="200px">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil porro veritatis ad magnam asperiores suscipit deserunt voluptatem expedita adipisci hic obcaecati, cum similique impedit at repudiandae exercitationem rem. Non, ea!
+      </div>
+  </div>
+</body>
+</html>

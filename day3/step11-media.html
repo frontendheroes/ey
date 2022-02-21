@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        addEventListener("load", init);
+        var vid;
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", playHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", pauseHandler);
+            document.getElementsByTagName("button")[2].addEventListener("click", stopHandler);
+            vid = document.getElementById("vid");
+        }
+        function playHandler(){
+            vid.play();
+            setInterval(function(){
+                document.getElementById("log").textContent = vid.currentTime;
+            },500)
+        }
+        function pauseHandler(){
+            vid.pause();
+        }
+        function stopHandler(){
+            vid.pause();
+            vid.currentTime = 0;
+        }
+    </script>
+</head>
+<body>
+    <h1>http://tooncrush.com/media.zip</h1>
+    <video id="vid">
+        <source src="media/html5.webm">
+        <source src="media/html5.mp4">
+    </video>
+    <h2>Play Time : <span id="log"></span></h2>
+    <hr>
+    <button>Play</button>
+    <button>Pause</button>
+    <button>Stop</button>
+</body>
+</html>

@@ -6,47 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        canvas{
+        #can1{
             border: 1px solid rgb(32, 32, 32);
-            display: block;
-            margin: auto;
+            position: absolute;
+            left: 200px;
+        }
+        #can2{
+            border: 1px solid rgb(32, 32, 32);
+            position: absolute;
+            left: 200px;
         }
     </style>
     <script>
         addEventListener("load", init);
-        var can,ctx;
+        var can1,ctx1,can2,ctx2;
         function init(){
-            can = document.getElementById("can");
-            ctx = can.getContext("2d");
-            // ctx.fillRect(0,0,200,100);
-            // ctx.strokeRect(0,0,200,100);
+            can1 = document.getElementById("can1");
+            ctx1 = can1.getContext("2d");
+            ctx1.moveTo(100,100);
+            ctx1.lineTo(200,100);
+            ctx1.lineTo(200,200);
+            ctx1.lineTo(100,200);
+            ctx1.lineTo(100,100);
+            ctx1.moveTo(300,100);
+            ctx1.lineTo(400,100);
+            ctx1.lineTo(400,200);
+            ctx1.lineTo(300,200);
+            ctx1.lineTo(300,100);
+            ctx1.stroke();
 
-            // ctx.moveTo(100,100);
-            // ctx.lineTo(150,150);
-            // ctx.moveTo(200,200);
-            // ctx.lineTo(250,250);
-            // ctx.moveTo(300,300);
-            // ctx.lineTo(350,350);
-
-            ctx.moveTo(100,100);
-            ctx.lineTo(200,100);
-            ctx.lineTo(200,200);
-            ctx.lineTo(100,200);
-            ctx.lineTo(100,100);
-
-            ctx.moveTo(300,100);
-            ctx.lineTo(400,100);
-            ctx.lineTo(400,200);
-            ctx.lineTo(300,200);
-            ctx.lineTo(300,100);
-
-            ctx.stroke();
+            can2 = document.getElementById("can2");
+            ctx2 = can2.getContext("2d");
+            ctx2.moveTo(100,100);
+            ctx2.lineTo(150,150);
+            ctx2.moveTo(200,200);
+            ctx2.lineTo(250,250);
+            ctx2.moveTo(300,300);
+            ctx2.lineTo(350,350);
+            ctx2.lineTo(300,400);
+            ctx2.moveTo(250,450);
+            ctx2.lineTo(200,500);
+            ctx2.stroke();
         };
 
     </script>
 </head>
 <body>
-    <canvas id="can" width="500" height="500"></canvas>
+    <canvas id="can1" width="500" height="500"></canvas>
+    <canvas id="can2" width="500" height="500"></canvas>
 </body>
 </html>
 

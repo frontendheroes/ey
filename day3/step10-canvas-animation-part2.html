@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #can{
+            border: 1px solid rgb(32, 32, 32);
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        addEventListener("load", init);
+        var can,ctx,boxX = 0,boxY = 0, boxD = 0;
+        function init(){
+            can = document.getElementById("can");
+            ctx = can.getContext("2d");
+            setInterval(animation,10);
+        };
+
+/*         function animation(){
+            ctx.clearRect(0,0,500,500);
+            ctx.fillRect(boxX,0,100,100);
+            if(boxX > 500){
+                boxX = -100
+            }
+            boxX++;
+        } */
+
+        function animation(){
+            // ctx.clearRect(0,0,500,500);
+            boxX = Math.round( Math.random() * 500 );
+            boxY = Math.round( Math.random() * 500 );
+            boxD = Math.round( Math.random() * 100 );
+
+            var red =  Math.round( Math.random() * 255 );
+            var green =  Math.round( Math.random() * 255 );
+            var blue =  Math.round( Math.random() * 255 );
+            var alpha =  Math.random();
+
+            ctx.fillStyle = "rgba("+red+","+green+","+blue+","+alpha+")";
+            ctx.fillRect(boxX,boxY,boxD,boxD);
+        }
+
+    </script>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+</body>
+</html>
